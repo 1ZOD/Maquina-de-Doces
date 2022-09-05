@@ -13,8 +13,8 @@
       </div>
       <div class="campo-moedas">
         <button type="button" @click="umreal"><img alt="1 real" src="./assets/1real.png"  style="transition: ease 0.5s;" height="170" width="170"/></button>
-        <button type="button"><img alt="2 real" src="./assets/2reais.png" style="transition: ease 0.5s;" height="170" width="170"/></button>
-        <button type="button"><img alt="5 real" src="./assets/5reais.png" style="transition: ease 0.5s;" height="170" width="170"></button>
+        <button type="button" @click="doisreais"><img alt="2 real" src="./assets/2reais.png" style="transition: ease 0.5s;" height="170" width="170"/></button>
+        <button type="button" @click="cincoreais"><img alt="5 real" src="./assets/5reais.png" style="transition: ease 0.5s;" height="170" width="170"></button>
       </div>
     </div>
   </div>
@@ -25,13 +25,22 @@
   export default{
     data(){
       return{
-        creditos:"R$ 0,00"
+        creditos: 0
       }
     },
     methods:{
       umreal(){
-        console.log("teste")
-      }
+        this.creditos = this.creditos + 1
+        console.log(this.creditos)
+      },
+      doisreais(){
+        this.creditos = this.creditos + 2
+        console.log(this.creditos)
+      },
+      cincoreais(){
+        this.creditos = this.creditos + 5
+        console.log(this.creditos)
+      },
     }
   }
 
