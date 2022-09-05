@@ -6,7 +6,7 @@
         <button type="button" id="botao-a"><img alt="botao-a" src="./assets/A.png" style="height: 4.5vh;"/></button>
         <button type="button"><img alt="botao-b" src="./assets/B.png" style="height: 4.5vh;"/></button>
         <button type="button"><img alt="botao-c" src="./assets/C.png" style="height: 4.5vh;"/></button>
-        <input type="text" id='screen' disabled= 'true' value="R$ 00.0">
+        <input type="text" disabled='true' v-model="creditos">
       </div>
       <div class="saida_doces">
         <button type="button"><img alt="botao-c" src="./assets/saida_maquina.png" style="height: 8vh;"/></button>
@@ -23,6 +23,11 @@
 
 <script>
   export default{
+    data(){
+      return{
+        creditos:"R$ 0,00"
+      }
+    },
     methods:{
       umreal(){
         console.log("teste")
