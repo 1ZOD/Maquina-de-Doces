@@ -3,9 +3,9 @@
     <div class="base_grid">
       <div class="campo_maquina">
         <img alt="maquina_doces" src="./assets/maquina.png">
-        <button type="button" id="botao-a"><img alt="botao-a" src="./assets/A.png" style="height: 4.5vh;"/></button>
-        <button type="button"><img alt="botao-b" src="./assets/B.png" style="height: 4.5vh;"/></button>
-        <button type="button"><img alt="botao-c" src="./assets/C.png" style="height: 4.5vh;"/></button>
+        <button type="button" @click="botaoA"><img alt="botao-a" src="./assets/A.png" style="height: 4.5vh;"/></button>
+        <button type="button" @click="botaoB"><img alt="botao-b" src="./assets/B.png" style="height: 4.5vh;"/></button>
+        <button type="button" @click="botaoC"><img alt="botao-c" src="./assets/C.png" style="height: 4.5vh;"/></button>
         <input type="text" disabled='true' v-model="creditos">
       </div>
       <div class="saida_doces">
@@ -25,21 +25,45 @@
   export default{
     data(){
       return{
-        creditos: 0
+        creditos: 0,
       }
     },
     methods:{
       umreal(){
         this.creditos = this.creditos + 1
-        console.log(this.creditos)
       },
       doisreais(){
         this.creditos = this.creditos + 2
-        console.log(this.creditos)
       },
       cincoreais(){
         this.creditos = this.creditos + 5
-        console.log(this.creditos)
+      },
+      botaoA(){
+        if(this.creditos >= 6){
+        const canculo = this.creditos - 6
+        alert("Voce recebeu o Doce A (Laranja)"+"\n"+ "Troco: R$ " + canculo +'.00')
+        this.creditos = 0
+        }else{
+          alert("Opss, você não tem 6 reais")
+        }
+      },
+      botaoB(){
+        if(this.creditos >= 7){
+        const canculo = this.creditos - 7
+        alert("Voce recebeu o Doce B (Rosa)"+"\n"+ "Troco: R$ " + canculo +'.00')
+        this.creditos = 0
+        }else{
+          alert("Opss, você não tem 7 reais")
+        }
+      },
+      botaoC(){
+        if(this.creditos >= 8){
+        const canculo = this.creditos - 8
+        alert("Voce recebeu o Doce C (Cinza)"+"\n"+ "Troco: R$ " + canculo +'.00')
+        this.creditos = 0
+        }else{
+          alert("Opss, você não tem 8 reais")
+        }
       },
     }
   }
