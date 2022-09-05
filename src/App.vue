@@ -3,15 +3,16 @@
     <div class="base_grid">
       <div class="campo_maquina">
         <img alt="maquina_doces" src="./assets/maquina.png">
-        <button type="button"><img alt="botao-a" src="./assets/A.png" style="height: 4.5vh;"/></button>
+        <button type="button" id="botao-a"><img alt="botao-a" src="./assets/A.png" style="height: 4.5vh;"/></button>
         <button type="button"><img alt="botao-b" src="./assets/B.png" style="height: 4.5vh;"/></button>
         <button type="button"><img alt="botao-c" src="./assets/C.png" style="height: 4.5vh;"/></button>
+        <input type="text" id='screen' disabled= 'true' value="R$ 00.0">
       </div>
       <div class="saida_doces">
         <button type="button"><img alt="botao-c" src="./assets/saida_maquina.png" style="height: 8vh;"/></button>
       </div>
       <div class="campo-moedas">
-        <button type="button"><img alt="1 real" src="./assets/1real.png"  style="transition: ease 0.5s;" height="170" width="170"/></button>
+        <button type="button" @click="umreal"><img alt="1 real" src="./assets/1real.png"  style="transition: ease 0.5s;" height="170" width="170"/></button>
         <button type="button"><img alt="2 real" src="./assets/2reais.png" style="transition: ease 0.5s;" height="170" width="170"/></button>
         <button type="button"><img alt="5 real" src="./assets/5reais.png" style="transition: ease 0.5s;" height="170" width="170"></button>
       </div>
@@ -21,14 +22,14 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    // HelloWorld
+  export default{
+    methods:{
+      umreal(){
+        console.log("teste")
+      }
+    }
   }
-}
+
 </script>
 
 <style>
@@ -73,6 +74,15 @@ export default {
   cursor: pointer;
 }
 /* #--FIM BOTOES ABC--# */
+.campo_maquina > input{
+  position:relative; 
+  top:-26vh; 
+  left:16.5vh;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2.6vh;
+}
 
 /* #--TAMPA PRETA MAQUINA--# */
 .saida_doces > button{
