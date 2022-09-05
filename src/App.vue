@@ -11,6 +11,17 @@
       <div class="saida_doces">
         <button type="button"><img alt="botao-c" src="./assets/saida_maquina.png" style="height: 8vh;"/></button>
       </div>
+      <div class="doces-comprados">
+        <div class="doce-laranja">
+          <button type="button" ><img alt="botao-c" src="./assets/docelaranja.png" style="height: 6vh;"/></button>
+        </div>
+        <div class="doce-rosa">
+        <button type="button" ><img alt="botao-c" src="./assets/doocerosa.png" style="height: 6vh;"/></button>
+        </div>
+        <div class="doce-cinza">
+        <button type="button" ><img alt="botao-c" src="./assets/docecinza.png" style="height: 6vh;"/></button>
+        </div>
+      </div>
       <div class="campo-moedas">
         <button type="button" @click="umreal"><img alt="1 real" src="./assets/1real.png"  style="transition: ease 0.5s;" height="170" width="170"/></button>
         <button type="button" @click="doisreais"><img alt="2 real" src="./assets/2reais.png" style="transition: ease 0.5s;" height="170" width="170"/></button>
@@ -87,7 +98,7 @@
 /* #--DIVIDE O HTML EM DUAS COLUNAS--# */
 .base_grid{
   display: grid;
-  grid-template-columns: 100vh 0vh 100vh;
+  grid-template-columns: 100vh 0vh 0vh 100vh;
   justify-items: left;
   column-gap: 10px;
 }
@@ -128,9 +139,41 @@
   top:70vh; 
   left:-50vh;
   border: none;
+  z-index: 1;
   background-color: transparent;
 }
 /* #--FIM TAMPA PRETA MAQUINA--# */
+
+.doces-comprados{
+  display: flex;
+  flex-direction: row;
+  height: 10px;
+}
+
+.doce-laranja> button{
+  position:relative; 
+  top:71vh; 
+  left:-50vh;
+  border: none;
+  background-color: transparent;
+  z-index: 0;
+}
+.doce-rosa > button{
+  position:absolute; 
+  top:71vh; 
+  left:56vh;
+  border: none;
+  background-color: transparent;
+  z-index: 0;
+}
+.doce-cinza > button{
+  position:absolute; 
+  top:71vh; 
+  left:58vh;
+  border: none;
+  background-color: transparent;
+  z-index: 0;
+}
 
 /* #--MOEDAS--# */
 .campo-moedas > button {
