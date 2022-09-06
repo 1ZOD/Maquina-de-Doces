@@ -10,17 +10,17 @@
       </div>
       <div class="saida_doces">
         <button type="button"><img alt="botao-c" src="./assets/saida_maquina.png" style="height: 8vh;"/></button>
-        <button type="button"><img alt="botao-c" src="./assets/saco.png" style="height:10vh;position:absolute; top:1vh; left:1vh;z-index: 4;"/></button>
+        <button type="button"><img alt="botao-c" src="./assets/saco.png" style="height:10vh;width:7vw;position:absolute; top:1vh; left:2.5vh;z-index: 4;"/></button>
       </div>
       <div class="doces-comprados">
         <div class="doce-laranja">
-          <button type="button" id="laranja" ><img alt="botao-c" src="./assets/docelaranja.png" style="height: 5vh;"/></button>
+          <button type="button" id="laranja" ><img alt="botao-c" src="./assets/docelaranja.png" style="height: 4vh;"/></button>
         </div>
         <div class="doce-rosa">
-        <button type="button" id="rosa" ><img alt="botao-c" src="./assets/doocerosa.png" style="height: 5vh;"/></button>
+        <button type="button" id="rosa" ><img alt="botao-c" src="./assets/doocerosa.png" style="height: 4vh;"/></button>
         </div>
         <div class="doce-cinza">
-        <button type="button" id="cinza" ><img alt="botao-c" src="./assets/docecinza.png" style="height: 5vh;"/></button>
+        <button type="button" id="cinza" ><img alt="botao-c" src="./assets/docecinza.png" style="height: 4vh;"/></button>
         </div>
       </div>
       <div class="campo-moedas">
@@ -175,7 +175,7 @@
 .doce-laranja> button{
   position:relative; 
   top:71vh; 
-  left:-50vh;
+  left:-48vh;
   border: none;
   background-color: transparent;
   z-index: 0;
