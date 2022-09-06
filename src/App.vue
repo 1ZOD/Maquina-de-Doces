@@ -10,16 +10,17 @@
       </div>
       <div class="saida_doces">
         <button type="button"><img alt="botao-c" src="./assets/saida_maquina.png" style="height: 8vh;"/></button>
+        <button type="button"><img alt="botao-c" src="./assets/saco.png" style="height:10vh;position:absolute; top:1vh; left:1vh;z-index: 4;"/></button>
       </div>
       <div class="doces-comprados">
         <div class="doce-laranja">
-          <button type="button" ><img alt="botao-c" src="./assets/docelaranja.png" style="height: 6vh;"/></button>
+          <button type="button" id="laranja" ><img alt="botao-c" src="./assets/docelaranja.png" style="height: 5vh;"/></button>
         </div>
         <div class="doce-rosa">
-        <button type="button" ><img alt="botao-c" src="./assets/doocerosa.png" style="height: 6vh;"/></button>
+        <button type="button" id="rosa" ><img alt="botao-c" src="./assets/doocerosa.png" style="height: 5vh;"/></button>
         </div>
         <div class="doce-cinza">
-        <button type="button" ><img alt="botao-c" src="./assets/docecinza.png" style="height: 6vh;"/></button>
+        <button type="button" id="cinza" ><img alt="botao-c" src="./assets/docecinza.png" style="height: 5vh;"/></button>
         </div>
       </div>
       <div class="campo-moedas">
@@ -54,6 +55,13 @@
         const canculo = this.creditos - 6
         alert("Voce recebeu o Doce A (Laranja)"+"\n"+ "Troco: R$ " + canculo +'.00')
         this.creditos = 0
+        document.getElementById("laranja").animate([
+          { transform: 'translateY(0px)'},
+          { transform: 'translateY(90px)'},
+        ], {
+          duration: 1500,
+          iterations: 1
+        });
         }else{
           alert("Opss, você não tem 6 reais")
         }
@@ -63,6 +71,13 @@
         const canculo = this.creditos - 7
         alert("Voce recebeu o Doce B (Rosa)"+"\n"+ "Troco: R$ " + canculo +'.00')
         this.creditos = 0
+        document.getElementById("rosa").animate([
+          { transform: 'translateY(0px)'},
+          { transform: 'translateY(90px)'},
+        ], {
+          duration: 1500,
+          iterations: 1
+        });
         }else{
           alert("Opss, você não tem 7 reais")
         }
@@ -72,6 +87,13 @@
         const canculo = this.creditos - 8
         alert("Voce recebeu o Doce C (Cinza)"+"\n"+ "Troco: R$ " + canculo +'.00')
         this.creditos = 0
+        document.getElementById("cinza").animate([
+          { transform: 'translateY(0px)'},
+          { transform: 'translateY(90px)'},
+        ], {
+          duration: 1500,
+          iterations: 1
+        });
         }else{
           alert("Opss, você não tem 8 reais")
         }
