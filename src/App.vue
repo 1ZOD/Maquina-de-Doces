@@ -63,7 +63,7 @@
           iterations: 1
         });
         }else{
-          alert("Opss, você não tem 6 reais")
+          alert("Credito Insuficiente")
         }
       },
       botaoB(){
@@ -79,7 +79,7 @@
           iterations: 1
         });
         }else{
-          alert("Opss, você não tem 7 reais")
+          alert("Credito Insuficiente")
         }
       },
       botaoC(){
@@ -95,7 +95,7 @@
           iterations: 1
         });
         }else{
-          alert("Opss, você não tem 8 reais")
+          alert("Credito Insuficiente")
         }
       },
     }
