@@ -53,8 +53,8 @@
       },
       botaoA(){
         if(this.creditos >= 6){
-        const canculo = this.creditos - 6
-        alert("Voce recebeu o Doce A (Laranja)"+"\n"+ "Troco: R$ " + canculo +'.00')
+        const calculo = this.creditos - 6
+        alert("Voce recebeu o Doce A (Laranja)"+"\n"+ "Troco: R$ " + calculo +'.00')
         this.creditos = 0
         document.getElementById("laranja").animate([
           { transform: 'translateY(0px)'},
@@ -69,8 +69,8 @@
       },
       botaoB(){
         if(this.creditos >= 7){
-        const canculo = this.creditos - 7
-        alert("Voce recebeu o Doce B (Rosa)"+"\n"+ "Troco: R$ " + canculo +'.00')
+        const calculo = this.creditos - 7
+        alert("Voce recebeu o Doce B (Rosa)"+"\n"+ "Troco: R$ " + calculo +'.00')
         this.creditos = 0
         document.getElementById("rosa").animate([
           { transform: 'translateY(0px)'},
@@ -85,8 +85,8 @@
       },
       botaoC(){
         if(this.creditos >= 8){
-        const canculo = this.creditos - 8
-        alert("Voce recebeu o Doce C (Cinza)"+"\n"+ "Troco: R$ " + canculo +'.00')
+        const calculo = this.creditos - 8
+        alert("Voce recebeu o Doce C (Cinza)"+"\n"+ "Troco: R$ " + calculo +'.00')
         this.creditos = 0
         document.getElementById("cinza").animate([
           { transform: 'translateY(0px)'},
