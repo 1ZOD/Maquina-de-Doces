@@ -1,5 +1,6 @@
 <template>
   <div class="background">
+    <img id="gato" alt="gatinho" src="./assets/gato.png">
     <div class="base_grid">
       <div class="campo_maquina">
         <img alt="maquina_doces" src="./assets/maquina.png">
@@ -111,11 +112,20 @@
 /* #--BACKGROUND--# */
 .background{
   margin: 0%;
-  height: 100vh;
+  height: 100%;
   background-image: url(./assets/background.png);
-  background-repeat: no-repeat;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,229,168,1) 0%, rgba(251,174,222,1) 100.7% );
+  background-repeat: repeat;
 }
 /* #--FIM-BACKGROUND--# */
+
+#gato{
+  position:relative; 
+  top:7vh; 
+  left:54vh;
+  height: 10vh;
+  z-index: 33;
+}
 
 /* #--DIVIDE O HTML EM DUAS COLUNAS--# */
 .base_grid{
@@ -173,16 +183,16 @@
 }
 
 .doce-laranja> button{
-  position:relative; 
-  top:71vh; 
-  left:-48vh;
+  position:absolute; 
+  top:84vh; 
+  left:58vh;
   border: none;
   background-color: transparent;
   z-index: 0;
 }
 .doce-rosa > button{
   position:absolute; 
-  top:71vh; 
+  top:84vh; 
   left:56vh;
   border: none;
   background-color: transparent;
@@ -190,7 +200,7 @@
 }
 .doce-cinza > button{
   position:absolute; 
-  top:71vh; 
+  top:84vh; 
   left:58vh;
   border: none;
   background-color: transparent;
