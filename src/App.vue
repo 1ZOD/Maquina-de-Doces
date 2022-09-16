@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <img id="gato" alt="gatinho" src="./assets/gato.png">
+    <img id="gato" @click="gato_maluco" alt="gatinho" src="./assets/gato.png">
     <div class="base_grid">
       <div class="campo_maquina">
         <img alt="maquina_doces" src="./assets/maquina.png">
@@ -35,6 +35,10 @@
 </template>
 
 <script>
+  import audio from "@/assets/sound/ronco.mp3";
+  import coin from "@/assets/sound/coin.mp4";
+  import win from "@/assets/sound/tuturu.mp4";
+
   export default{
     data(){
       return{
@@ -43,16 +47,22 @@
     },
     methods:{
       umreal(){
+        const music = new Audio(coin);
+        music.play(); 
         this.creditos = this.creditos + 1
       },
       doisreais(){
+        const music = new Audio(coin);
+        music.play(); 
         this.creditos = this.creditos + 2
       },
       cincoreais(){
+        const music = new Audio(coin);
+        music.play(); 
         this.creditos = this.creditos + 5
       },
       botaoA(){
-        if(this.creditos >= 6){
+        if(this.creditos >= 6){ 
         const calculo = this.creditos - 6
         alert("Voce recebeu o Doce A (Laranja)"+"\n"+ "Troco: R$ " + calculo +'.00')
         this.creditos = 0
@@ -62,7 +72,9 @@
         ], {
           duration: 1500,
           iterations: 1
-        });
+        })
+        const music = new Audio(win);
+        music.play();
         }else{
           alert("Credito Insuficiente")
         }
@@ -78,7 +90,9 @@
         ], {
           duration: 1500,
           iterations: 1
-        });
+        })
+        const music = new Audio(win);
+        music.play();
         }else{
           alert("Credito Insuficiente")
         }
@@ -94,11 +108,18 @@
         ], {
           duration: 1500,
           iterations: 1
-        });
+        })
+        const music = new Audio(win);
+        music.play();
         }else{
           alert("Credito Insuficiente")
         }
       },
+      gato_maluco(){
+        const music = new Audio(audio);
+        music.play();
+        alert("Não Acorde o Gato")
+      }
     }
   }
 
@@ -125,6 +146,7 @@
   left:54vh;
   height: 10vh;
   z-index: 33;
+  /* cursor: pointer; */
 }
 
 /* #--DIVIDE O HTML EM DUAS COLUNAS--# */
