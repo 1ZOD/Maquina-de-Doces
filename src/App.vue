@@ -35,14 +35,16 @@
 </template>
 
 <script>
-  import audio from "@/assets/sound/ronco.mp3";
+  import ronco from "@/assets/sound/ronco.mp3";
   import coin from "@/assets/sound/coin.mp4";
   import win from "@/assets/sound/tuturu.mp4";
+  import banido from "@/assets/sound/banido.mp4";
 
   export default{
     data(){
       return{
         creditos: 0,
+        raiva: 0,
       }
     },
     methods:{
@@ -116,9 +118,18 @@
         }
       },
       gato_maluco(){
-        const music = new Audio(audio);
-        music.play();
-        alert("Não Acorde o Gato")
+        this.raiva = this.raiva + 1
+        if (this.raiva == 3){
+          const music = new Audio(ronco);
+          music.play();
+        }if(this.raiva == 4){
+          const music2 = new Audio(banido);
+          music2.play();
+        }if(this.raiva == 5){
+          window.close();
+        }else{
+          alert("Não Acorde o Gato")
+        }
       }
     }
   }
