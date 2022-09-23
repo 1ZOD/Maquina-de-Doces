@@ -1,33 +1,33 @@
 <template>
   <div class="background">
-    <img id="gato" @click="gato_maluco" alt="gatinho" src="./assets/gato.png">
+    <img id="gato" @click="gato_maluco" alt="gatinho" src="./assets/img/gato.png">
     <div class="base_grid">
       <div class="campo_maquina">
-        <img alt="maquina_doces" src="./assets/maquina.png">
-        <button type="button" @click="botaoA"><img alt="botao-a" src="./assets/A.png" style="height: 4.5vh;"/></button>
-        <button type="button" @click="botaoB"><img alt="botao-b" src="./assets/B.png" style="height: 4.5vh;"/></button>
-        <button type="button" @click="botaoC"><img alt="botao-c" src="./assets/C.png" style="height: 4.5vh;"/></button>
+        <img alt="maquina_doces" src="./assets/img/maquina.png">
+        <button type="button" @click="botaoA"><img alt="botao-a" src="./assets/img/A.png" style="height: 4.5vh;"/></button>
+        <button type="button" @click="botaoB"><img alt="botao-b" src="./assets/img/B.png" style="height: 4.5vh;"/></button>
+        <button type="button" @click="botaoC"><img alt="botao-c" src="./assets/img/C.png" style="height: 4.5vh;"/></button>
         <input type="text" disabled='true' v-model="creditos">
       </div>
       <div class="saida_doces">
-        <button type="button"><img alt="botao-c" src="./assets/saida_maquina.png" style="height: 8vh;"/></button>
-        <button type="button"><img alt="botao-c" src="./assets/saco.png" style="height:10vh;width:7vw;position:absolute; top:1vh; left:2.5vh;z-index: 4;"/></button>
+        <button type="button"><img alt="botao-c" src="./assets/img/saida_maquina.png" style="height: 8vh;"/></button>
+        <button type="button"><img alt="botao-c" src="./assets/img/saco.png" style="height:10vh;width:7vw;position:absolute; top:1vh; left:2.5vh;z-index: 4;"/></button>
       </div>
       <div class="doces-comprados">
         <div class="doce-laranja">
-          <button type="button" id="laranja" ><img alt="botao-c" src="./assets/docelaranja.png" style="height: 4vh;"/></button>
+          <button type="button" id="laranja" ><img alt="botao-c" src="./assets/img/docelaranja.png" style="height: 4vh;"/></button>
         </div>
         <div class="doce-rosa">
-        <button type="button" id="rosa" ><img alt="botao-c" src="./assets/doocerosa.png" style="height: 4vh;"/></button>
+        <button type="button" id="rosa" ><img alt="botao-c" src="./assets/img/doocerosa.png" style="height: 4vh;"/></button>
         </div>
         <div class="doce-cinza">
-        <button type="button" id="cinza" ><img alt="botao-c" src="./assets/docecinza.png" style="height: 4vh;"/></button>
+        <button type="button" id="cinza" ><img alt="botao-c" src="./assets/img/docecinza.png" style="height: 4vh;"/></button>
         </div>
       </div>
       <div class="campo-moedas">
-        <button type="button" @click="umreal"><img alt="1 real" src="./assets/1real.png"  style="transition: ease 0.5s;" height="170" width="170"/></button>
-        <button type="button" @click="doisreais"><img alt="2 real" src="./assets/2reais.png" style="transition: ease 0.5s;" height="170" width="170"/></button>
-        <button type="button" @click="cincoreais"><img alt="5 real" src="./assets/5reais.png" style="transition: ease 0.5s;" height="170" width="170"></button>
+        <button type="button" @click="umreal"><img alt="1 real" src="./assets/img/1real.png"  style="transition: ease 0.5s;" height="170" width="170"/></button>
+        <button type="button" @click="doisreais"><img alt="2 real" src="./assets/img/2reais.png" style="transition: ease 0.5s;" height="170" width="170"/></button>
+        <button type="button" @click="cincoreais"><img alt="5 real" src="./assets/img/5reais.png" style="transition: ease 0.5s;" height="170" width="170"></button>
       </div>
     </div>
   </div>
@@ -145,7 +145,7 @@
 .background{
   margin: 0%;
   height: 100%;
-  background-image: url(./assets/background.png);
+  background-image: url(./assets/img/background.png);
   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,229,168,1) 0%, rgba(251,174,222,1) 100.7% );
   background-repeat: repeat;
 }
