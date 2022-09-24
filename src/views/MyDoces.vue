@@ -31,17 +31,17 @@
         </div>
       </div>
     </div>
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 </template>
   
 <script>
+    // import Todo from "@/components/MyTodo";
     import ronco from "@/assets/sound/ronco.mp3";
     import coin from "@/assets/sound/coin.mp4";
     import win from "@/assets/sound/tuturu.mp4";
     import banido from "@/assets/sound/banido.mp4";
   
     export default {
-      name:"MaquinaComponente",
+      name: 'MyDoces',
       data(){
         return{
           creditos: 0,
