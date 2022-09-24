@@ -1,0 +1,4 @@
+npm install
+npm install vue
+npm install vuex@next --save
+npm install vue-router@4
