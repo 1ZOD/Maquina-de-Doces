@@ -34,7 +34,6 @@
 </template>
   
 <script>
-    // import Todo from "@/components/MyTodo";
     import ronco from "@/assets/sound/ronco.mp3";
     import coin from "@/assets/sound/coin.mp4";
     import win from "@/assets/sound/tuturu.mp4";
