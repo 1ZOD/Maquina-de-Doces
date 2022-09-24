@@ -5,7 +5,7 @@
         <section class="navbar-section">
           <router-link to="/" class="btn">Home</router-link>
           <router-link to="/Doces" class="btn">Doces</router-link>
-          <router-link to="/Doces" class="btn">Elevador</router-link>
+          <router-link to="/Elevador" class="btn">Elevador</router-link>
         </section>
       </header>
       <router-view/>
