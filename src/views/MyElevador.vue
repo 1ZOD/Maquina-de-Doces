@@ -4,9 +4,9 @@
             <div class="campo-predio">
               <img src="@/assets/img/predio.png">
               <img id="elevador" src="@/assets/img/elevador.png">
-              <button type="button" @click="3"><img alt="3 andar" src="@/assets/img/3botao.png" style="height: 10vh;"/></button>
-              <button type="button" @click="2"><img alt="2 andar" src="@/assets/img/2botao.png" style="height: 10vh;"/></button>
-              <button type="button" @click="1"><img alt="1 andar" src="@/assets/img/1botao.png" style="height: 10vh;"/></button>
+              <button type="button" @click="terceiro_andar"><img alt="3 andar" src="@/assets/img/3botao.png" style="height: 10vh;"/></button>
+              <button type="button" @click="segundo_andar"><img alt="2 andar" src="@/assets/img/2botao.png" style="height: 10vh;"/></button>
+              <button type="button" @click="primeiro_andar"><img alt="1 andar" src="@/assets/img/1botao.png" style="height: 10vh;"/></button>
               <button type="button" @click="terro"><img alt="terreo" src="@/assets/img/terreo.png" style="height: 10vh;"/></button>
             </div>
         </div>
@@ -22,10 +22,18 @@
         };
       },
       methods:{
-        // terreio_ao_1(){
-        //     var myvideo = document.querySelector("1")
-        //     myvideo.play();
-        // },
+        primeiro_andar(){
+          var teste = document.getElementById("elevador")
+          teste.style.top = "23vh"
+        },
+        segundo_andar(){
+          var teste = document.getElementById("elevador")
+          teste.style.top = "6.5vh"
+        },
+        terceiro_andar(){
+          var teste = document.getElementById("elevador")
+          teste.style.top = "-8vh"
+        }
       }
     }
 </script>
@@ -59,6 +67,7 @@ html, body {
     position:absolute; 
     top:40vh; 
     left:-20vh;
+    transition: ease 3s;
 }
 
 .campo-predio> button{
