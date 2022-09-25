@@ -8,6 +8,7 @@
               <button type="button" @click="segundo_andar"><img alt="2 andar" src="@/assets/img/2botao.png" style="height: 10vh;"/></button>
               <button type="button" @click="primeiro_andar"><img alt="1 andar" src="@/assets/img/1botao.png" style="height: 10vh;"/></button>
               <button type="button" @click="terro"><img alt="terreo" src="@/assets/img/terreo.png" style="height: 10vh;"/></button>
+              <img id="gato" src="@/assets/img/gato.png">
             </div>
         </div>
     </div>
@@ -23,20 +24,28 @@
       },
       methods:{
         terro(){
-          var teste = document.getElementById("elevador")
-          teste.style.top = "38vh"
+          var elevador = document.getElementById("elevador")
+          var gato = document.getElementById("gato")
+          elevador.style.top = "38vh"
+          gato.style.top = "88vh"
         },
         primeiro_andar(){
-          var teste = document.getElementById("elevador")
-          teste.style.top = "23vh"
+          var elevador = document.getElementById("elevador")
+          var gato = document.getElementById("gato")
+          elevador.style.top = "23vh"
+          gato.style.top = "72.5vh"
         },
         segundo_andar(){
-          var teste = document.getElementById("elevador")
-          teste.style.top = "6.5vh"
+          var elevador = document.getElementById("elevador")
+          var gato = document.getElementById("gato")
+          elevador.style.top = "6.5vh"
+          gato.style.top = "56vh"
         },
         terceiro_andar(){
-          var teste = document.getElementById("elevador")
-          teste.style.top = "-8vh"
+          var elevador = document.getElementById("elevador")
+          var gato = document.getElementById("gato")
+          elevador.style.top = "-8vh"
+          gato.style.top = "41.7vh"
         }
       }
     }
@@ -73,6 +82,16 @@ html, body {
     left:-19.7vh;
     transition: ease 2.5s;
 }
+
+#gato{
+    position:absolute; 
+    top:88vh;
+    left:65vh;
+    height: 4vh;
+    z-index: 33;
+    /* cursor: pointer; */
+    transition: ease 2.5s;
+  }
 
 .campo-predio> button{
     position:relative;
