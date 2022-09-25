@@ -9,6 +9,8 @@
               <button type="button" @click="primeiro_andar"><img alt="1 andar" src="@/assets/img/1botao.png" style="height: 10vh;"/></button>
               <button type="button" @click="terro"><img alt="terreo" src="@/assets/img/terreo.png" style="height: 10vh;"/></button>
               <img id="gato" src="@/assets/img/gato.png">
+              <img id="porta_esquerda" src="@/assets/img/porta_esquerda.png">
+              <img id="porta_direita" src="@/assets/img/porta_direita.png">
             </div>
         </div>
     </div>
@@ -26,26 +28,43 @@
         terro(){
           var elevador = document.getElementById("elevador")
           var gato = document.getElementById("gato")
+          var porta_esquerda = document.getElementById("porta_esquerda")
+          var porta_direita = document.getElementById("porta_direita")
           elevador.style.top = "38vh"
           gato.style.top = "88vh"
+          porta_esquerda.style.top = "81vh" 
+          porta_direita.style.top = "81vh"
+          
         },
         primeiro_andar(){
           var elevador = document.getElementById("elevador")
           var gato = document.getElementById("gato")
+          var porta_esquerda = document.getElementById("porta_esquerda")
+          var porta_direita = document.getElementById("porta_direita")
           elevador.style.top = "23vh"
           gato.style.top = "72.5vh"
+          porta_esquerda.style.top = "65.6vh" 
+          porta_direita.style.top = "65.6vh"
         },
         segundo_andar(){
+          var porta_esquerda = document.getElementById("porta_esquerda")
+          var porta_direita = document.getElementById("porta_direita")
           var elevador = document.getElementById("elevador")
           var gato = document.getElementById("gato")
           elevador.style.top = "6.5vh"
           gato.style.top = "56vh"
+          porta_esquerda.style.top = "49.1vh" 
+          porta_direita.style.top = "49.1vh"
         },
         terceiro_andar(){
+          var porta_esquerda = document.getElementById("porta_esquerda")
+          var porta_direita = document.getElementById("porta_direita")
           var elevador = document.getElementById("elevador")
           var gato = document.getElementById("gato")
           elevador.style.top = "-8vh"
           gato.style.top = "41.7vh"
+          porta_esquerda.style.top = "35vh" 
+          porta_direita.style.top = "35vh"
         }
       }
     }
@@ -91,7 +110,29 @@ html, body {
     z-index: 33;
     /* cursor: pointer; */
     transition: ease 2.5s;
-  }
+}
+
+#porta_esquerda{
+    display: flex;
+    position:absolute; 
+    top:81vh;
+    left:64.7vh;
+    height: 11.5vh;
+    z-index: 33;
+    /* cursor: pointer; */
+    transition: ease 2.5s;
+}
+
+#porta_direita{
+    display: flex;
+    position:absolute; 
+    top:81vh;
+    left:68.4vh;
+    height: 11.5vh;
+    z-index: 33;
+    /* cursor: pointer; */
+    transition: ease 2.5s;
+}
 
 .campo-predio> button{
     position:relative;
