@@ -67,7 +67,7 @@ html, body {
     position:absolute; 
     top:40vh; 
     left:-20vh;
-    transition: ease 3s;
+    transition: ease 2.5s;
 }
 
 .campo-predio> button{
