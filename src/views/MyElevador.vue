@@ -12,6 +12,10 @@
               <img id="porta_esquerda" src="@/assets/img/porta_esquerda.png">
               <img id="porta_direita" src="@/assets/img/porta_direita.png">
             </div>
+              <div class="controle-portas">
+                <button type="button" @click="fechar"><img alt="botao-fechar" src="@/assets/img/fechar.png" style="height: 10vh;"/></button>
+                <button type="button" @click="abrir"><img alt="botao-abrir" src="@/assets/img/abrir.png" style="height: 10vh;"/></button>
+              </div>
         </div>
     </div>
 </template>
@@ -21,7 +25,7 @@
       name: 'app',
       data(){
         return{
-          contador: 0,
+          porta_aberta: 0,
         };
       },
       methods:{
@@ -34,7 +38,6 @@
           gato.style.top = "88vh"
           porta_esquerda.style.top = "81vh" 
           porta_direita.style.top = "81vh"
-          
         },
         primeiro_andar(){
           var elevador = document.getElementById("elevador")
@@ -65,7 +68,19 @@
           gato.style.top = "41.7vh"
           porta_esquerda.style.top = "35vh" 
           porta_direita.style.top = "35vh"
-        }
+        },
+        abrir(){
+          var porta_esquerda = document.getElementById("porta_esquerda")
+          var porta_direita = document.getElementById("porta_direita")
+          porta_esquerda.style.display = "none" 
+          porta_direita.style.display = "none"
+        },
+        fechar(){
+          var porta_esquerda = document.getElementById("porta_esquerda")
+          var porta_direita = document.getElementById("porta_direita")
+          porta_esquerda.style.display = "flex" 
+          porta_direita.style.display = "flex"
+        },
       }
     }
 </script>
@@ -140,6 +155,17 @@ html, body {
     padding-bottom: 5vh;
     top:-80vh; 
     left:130vh;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.controle-portas> button{
+    position:relative;
+    display: flex; 
+    padding-bottom: 5vh;
+    top:35vh; 
+    left:150vh;
     border: none;
     background-color: transparent;
     cursor: pointer;
