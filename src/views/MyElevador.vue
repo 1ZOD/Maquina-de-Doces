@@ -21,6 +21,7 @@
 </template>
 
 <script>
+  import ding from "@/assets/sound/ding.mp4";
     export default {
       name: 'app',
       data(){
@@ -74,6 +75,8 @@
           var porta_direita = document.getElementById("porta_direita")
           porta_esquerda.style.display = "none" 
           porta_direita.style.display = "none"
+          const music = new Audio(ding);
+          music.play();
         },
         fechar(){
           var porta_esquerda = document.getElementById("porta_esquerda")
