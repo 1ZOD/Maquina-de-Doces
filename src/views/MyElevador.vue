@@ -22,6 +22,10 @@
         };
       },
       methods:{
+        terro(){
+          var teste = document.getElementById("elevador")
+          teste.style.top = "38vh"
+        },
         primeiro_andar(){
           var teste = document.getElementById("elevador")
           teste.style.top = "23vh"
@@ -65,8 +69,8 @@ html, body {
 }
 #elevador{
     position:absolute; 
-    top:40vh; 
-    left:-20vh;
+    top:38vh; 
+    left:-19.7vh;
     transition: ease 2.5s;
 }
 
