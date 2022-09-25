@@ -5,13 +5,27 @@
     </div>
     <div>
       <div class="texto-grupo">
-        <br>Nathan Marrega 81913620 <br>
-        <br>Gabriel Lucena dos Santos	819146592 <br>
-        <br>Rodrigo Souza Lins	819164766 <br>
-        <br>Gabriel Santos de Carvalho	819151151  <br>
-        <br>Pedro Henrique Martini	819147220 <br>
-        <br>Vinicius Vizza Campos	819145197 <br>
-        <br>Vitor Gonçalves Pereira Colazelli	819110980<br>
+        <div class="nomes">
+          <br>Nathan Marrega 81913620 <br>
+        </div>
+        <div class="nomes">
+          <br>Gabriel Lucena dos Santos	819146592 <br>
+        </div>
+        <div class="nomes">
+          <br>Rodrigo Souza Lins	819164766 <br>
+        </div>
+        <div class="nomes">
+          <br>Gabriel Santos de Carvalho	819151151  <br>
+        </div>
+        <div class="nomes">
+          <br>Pedro H. Martini	819147220 <br>
+        </div>
+        <div class="nomes">
+          <br>Vinicius Vizza Campos 819145197 <br>
+        </div>
+        <div class="nomes">
+          <br>Vitor Gonçalves Colazelli	819110980<br>
+        </div>
       </div>
     </div>
   </div>
@@ -46,10 +60,12 @@ export default {
     line-height: 64px;
 }
 .texto-grupo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
     font-family: 'Poppins';
     text-align: center;
-    padding-top: 1vh;
-    font-size: 5vh;
+    font-size: 3.7vh;
     line-height: 64px;
 }
 </style>
