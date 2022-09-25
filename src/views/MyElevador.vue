@@ -8,7 +8,7 @@
               <button type="button" @click="segundo_andar"><img alt="2 andar" src="@/assets/img/2botao.png" style="height: 10vh;"/></button>
               <button type="button" @click="primeiro_andar"><img alt="1 andar" src="@/assets/img/1botao.png" style="height: 10vh;"/></button>
               <button type="button" @click="terro"><img alt="terreo" src="@/assets/img/terreo.png" style="height: 10vh;"/></button>
-              <img id="gato" src="@/assets/img/gato.png">
+              <img id="gatinho" src="@/assets/img/gato.png">
               <img id="porta_esquerda" src="@/assets/img/porta_esquerda.png">
               <img id="porta_direita" src="@/assets/img/porta_direita.png">
             </div>
@@ -27,7 +27,7 @@
       methods:{
         terro(){
           var elevador = document.getElementById("elevador")
-          var gato = document.getElementById("gato")
+          var gato = document.getElementById("gatinho")
           var porta_esquerda = document.getElementById("porta_esquerda")
           var porta_direita = document.getElementById("porta_direita")
           elevador.style.top = "38vh"
@@ -38,7 +38,7 @@
         },
         primeiro_andar(){
           var elevador = document.getElementById("elevador")
-          var gato = document.getElementById("gato")
+          var gato = document.getElementById("gatinho")
           var porta_esquerda = document.getElementById("porta_esquerda")
           var porta_direita = document.getElementById("porta_direita")
           elevador.style.top = "23vh"
@@ -50,7 +50,7 @@
           var porta_esquerda = document.getElementById("porta_esquerda")
           var porta_direita = document.getElementById("porta_direita")
           var elevador = document.getElementById("elevador")
-          var gato = document.getElementById("gato")
+          var gato = document.getElementById("gatinho")
           elevador.style.top = "6.5vh"
           gato.style.top = "56vh"
           porta_esquerda.style.top = "49.1vh" 
@@ -60,7 +60,7 @@
           var porta_esquerda = document.getElementById("porta_esquerda")
           var porta_direita = document.getElementById("porta_direita")
           var elevador = document.getElementById("elevador")
-          var gato = document.getElementById("gato")
+          var gato = document.getElementById("gatinho")
           elevador.style.top = "-8vh"
           gato.style.top = "41.7vh"
           porta_esquerda.style.top = "35vh" 
@@ -102,7 +102,7 @@ html, body {
     transition: ease 2.5s;
 }
 
-#gato{
+#gatinho{
     position:absolute; 
     top:88vh;
     left:65vh;
