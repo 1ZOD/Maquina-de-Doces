@@ -61,7 +61,23 @@ html, body {
     box-shadow: 12px 9px 17px 0px rgba(39, 74, 126, 0.137); 
 }
 .btn-gerar{
-    
+    font-family: 'Monteserrat', sans-serif;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    width: 11vw;
+    height: 4vh;
+    background-color: rgb(133, 153, 192);
+    transition: 0.4s;
+    box-shadow: 12px 9px 17px 0px rgba(39, 74, 126, 0.137); 
+}
+
+.btn-gerar:hover{
+    cursor: pointer;
+    background-color: rgb(13, 78, 207);
+    transition: 0.4s;
+    box-shadow: 12px 9px 17px 0px rgba(39, 74, 126, 0.137); 
 }
 
 </style>
