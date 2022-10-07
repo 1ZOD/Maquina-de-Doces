@@ -8,7 +8,7 @@ import AnalisadorLexo from '@/views/AnalisadorLexo.vue'
 const routes = [
     {
         path: '/',
-        name: 'home',
+        name: 'homePage',
         component: Home,
     },
     {

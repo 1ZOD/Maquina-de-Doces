@@ -34,15 +34,17 @@
 <script>
 
 export default {
-  name: 'app',
+  name: 'homePage',
 }
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
 .principal-grid{
+  background-color: #fff;
   display: flex;
+  padding-bottom: 10%;
   flex-direction: column;
   padding-inline: 5vw;
 }

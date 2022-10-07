@@ -11,10 +11,13 @@
 </template>
 <script>
 
+export default{
+    name:'AnalisadorLexos'
+}
 
 </script>
-<style>
-.bg{
+<style >
+html{
     /* /* height: 100%; */
     background-image: linear-gradient( 109.6deg,  rgba(247,202,201,1) 20.6%, rgba(146,168,209,1) 85.9% );
     background-image: repeat;
@@ -25,7 +28,7 @@
 
 #Analisador{
     display: flex;
-    padding: 11%;
+    padding: 9%;
     flex-direction: column;
     row-gap: 1rem;
     align-items: center;
