@@ -6,6 +6,7 @@
           <router-link to="/" class="btn">Home</router-link>
           <router-link to="/Doces" class="btn">Doces</router-link>
           <router-link to="/Elevador" class="btn">Elevador</router-link>
+          <router-link to="/analisador" class="btn">Analisador</router-link>
         </section>
       </header>
       <router-view/>
