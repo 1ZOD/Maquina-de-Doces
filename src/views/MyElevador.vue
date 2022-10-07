@@ -90,9 +90,9 @@
 
 <style>
     
-html, body {
+/* html, body {
  overflow: hidden;
-}
+} */
 
 .background-elevador{
     margin: 0%;
