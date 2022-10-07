@@ -39,6 +39,7 @@ html, body {
     padding-top: 10vh;
 }
 
+
 .titulo{
     font-family: 'Poppins', sans-serif;
     font-size: 2vw;
@@ -61,7 +62,8 @@ html, body {
     box-shadow: 12px 9px 17px 0px rgba(39, 74, 126, 0.137); 
 }
 .btn-gerar{
-    font-family: 'Monteserrat', sans-serif;
+    /* font-family: 'Monteserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
     border-radius: 8px;
     border: none;
