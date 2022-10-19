@@ -1,82 +1,44 @@
 <template>
-    <div class="bg">
-        <div id="Analisador">
-            <span class="titulo">Escreva o Codigo</span>
-            <textarea class="campo-codigo" name="codigo"></textarea>
-            <button class="btn-gerar" type="button" @click="primeiro_andar"> Analisar </button>
-            
-            <!-- <textarea class="campo-codigo" name="codigo"></textarea> -->
-        </div>
+    <div class="grid-principal-analisador">
+        <analisador @trocarPagina="trocarPagina"/>
+        <dir v-if="pagina >= 1">
+            <Resultado @trocarPagina="trocarPagina" />
+        </dir>
     </div>
 </template>
-<script>
 
-export default{
-    name:'AnalisadorLexos'
-}
+<script>
+import Analisador from "@/components/AnalisadorComponente.vue"
+import Resultado from "@/components/ResultadoComponente.vue"
+
+export default {
+      name: 'AnalisadorView',
+      data(){
+        return{
+            pagina: "",
+        };
+      },
+      components:{
+        Analisador,
+        Resultado
+      },
+      methods: {
+            trocarPagina(pagina){
+                this.pagina = pagina;
+            }
+        },
+    }
 
 </script>
-<style >
-html{
-    /* /* height: 100%; */
-    background-image: linear-gradient( 109.6deg,  rgba(247,202,201,1) 20.6%, rgba(146,168,209,1) 85.9% );
-    background-image: repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
-}
 
-#Analisador{
+<style>
+
+.grid-principal-analisador{
     display: flex;
-    padding: 9%;
-    flex-direction: column;
-    row-gap: 1rem;
-    align-items: center;
     justify-content: center;
-    padding-top: 10vh;
-}
-
-
-.titulo{
-    font-family: 'Poppins', sans-serif;
-    font-size: 2vw;
-    color: rgb(68, 67, 67);
-}
-.campo-codigo{
-    font-size: 2vh;
-    padding: 1vh;
-    width: 78vw;
-    height: 50vh;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    box-shadow: 12px 9px 17px 0px rgba(39, 74, 126, 0.137); 
-}
-
-.campo-codigo:focus{
-    /* box-shadow: 0 0 0 0; */
-    outline: 0;
-    box-shadow: 12px 9px 17px 0px rgba(39, 74, 126, 0.137); 
-}
-.btn-gerar{
-    /* font-family: 'Monteserrat', sans-serif; */
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.3rem;
-    border-radius: 8px;
-    border: none;
-    color: white;
-    width: 11vw;
-    height: 4vh;
-    background-color: rgb(133, 153, 192);
-    transition: 0.4s;
-    box-shadow: 12px 9px 17px 0px rgba(39, 74, 126, 0.137); 
-}
-
-.btn-gerar:hover{
-    cursor: pointer;
-    background-color: rgb(13, 129, 207);
-    transition: 0.4s;
-    box-shadow: 12px 9px 17px 0px rgba(39, 74, 126, 0.137); 
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 </style>
