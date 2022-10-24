@@ -1,30 +1,41 @@
 <template>
     <div class="grid-principal-analisador">
-        <analisador @trocarPagina="trocarPagina"/>
+        <analisador @tabelaResponse="tabelaResponse" @trocarPagina="trocarPagina"/>
         <dir v-if="pagina >= 1">
-            <Resultado @trocarPagina="trocarPagina" />
+            <div id="resultado">
+                <span class="titulo-resultado">Resultado</span>
+                <div class="campo-resultado">
+                    <Tabela :response="response" @trocarPagina="trocarPagina" />
+                </div>
+            </div>
         </dir>
     </div>
 </template>
 
 <script>
 import Analisador from "@/components/AnalisadorComponente.vue"
-import Resultado from "@/components/ResultadoComponente.vue"
+import Tabela from "@/components/ResultadoTable.vue"
 
 export default {
       name: 'AnalisadorView',
       data(){
         return{
             pagina: "",
+            response:'',
         };
       },
       components:{
         Analisador,
-        Resultado
+        Tabela
       },
       methods: {
             trocarPagina(pagina){
                 this.pagina = pagina;
+            },
+            tabelaResponse(response){
+                this.response = response
+                console.log('AQUI RESPONSE')
+                console.log(response)
             }
         },
     }

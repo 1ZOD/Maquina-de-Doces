@@ -1,27 +1,44 @@
 <template>
     <div id="Analisador">
         <span class="titulo">Escreva o Codigo</span>
-        <textarea class="campo-codigo" name="codigo" id="codigo"></textarea>
-        <button class="btn-gerar" type="button" @click="trocarPagina">Analisar</button>
+        <textarea v-model.lazy="codigoForm.codigo" type="text" class="campo-codigo" name="codigo" id="codigo"></textarea>
+        <button v-on:click="SubmitDadoPost" class="btn-gerar" type="button">Analisar</button>
     </div>
 </template>
+
 <script>
+
+import { apiService } from '@/services/codigo';
 
 export default {
       name:'AnalisadorComponente',
-      emits: ['trocarPagina','teste'],
-      data(){
-        return{
-        };
-      },
-      methods:{
+      emits: ['trocarPagina','tabelaResponse'],
+        data () {
+            return{
+                codigoForm: {
+                    codigo: '',
+                },
+            }
+        },
+        methods:{
+            async SubmitDadoPost(e) {
+                e.preventDefault();
+                console.log(this.codigoForm.codigo)
+                apiService.analyser(this.codigoForm.codigo).then((response) => {
+                    this.$emit("tabelaResponse", response.data);
+                    console.log(response.data)
+                    this.$emit("trocarPagina", 1);
+                })
+                .catch((error) => {
+                    // console.log(error)
+                    this.showAlert(error.response.data.message)
+                });
+            },
             trocarPagina(){
-                var codigo = document.getElementById("codigo").value
-                this.$emit("teste", codigo);
                 this.$emit("trocarPagina", 1);
             }
         }   
-    }
+}
 </script>
 
 <style>

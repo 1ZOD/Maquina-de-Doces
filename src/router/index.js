@@ -22,9 +22,7 @@ const routes = [
         component: Elevador,
     },
     {
-        path: '/analisador',
-        name: 'AnalisadorLexo',
-        component: AnalisadorLexo,
+        path: '/analisador',name: 'AnalisadorLexo',component: AnalisadorLexo,
     }
 ]
 
