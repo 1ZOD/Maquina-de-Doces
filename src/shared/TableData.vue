@@ -57,6 +57,7 @@ export default {
     text-align: center;
     padding: 1rem;
     max-width: 10rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .table th {

@@ -2,11 +2,9 @@
     <div class="grid-principal-analisador">
         <analisador @tabelaResponse="tabelaResponse" @trocarPagina="trocarPagina"/>
         <dir v-if="pagina >= 1">
-            <div id="resultado">
-                <span class="titulo-resultado">Resultado</span>
-                <div class="campo-resultado">
-                    <Tabela :response="response" @trocarPagina="trocarPagina" />
-                </div>
+        <div class="titulo">Resultado</div>
+            <div class="campo-resultado">
+                <Tabela :response="response" @trocarPagina="trocarPagina" />
             </div>
         </dir>
     </div>
